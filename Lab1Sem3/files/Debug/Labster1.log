@@ -1,9 +1,0 @@
-﻿  List.cpp
-D:\My projects\Labster1\List.cpp(72,15): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(95,15): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(112,15): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(142,15): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(173,16): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(192,56): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(209): warning C4715: List::operator[]: значение возвращается не при всех путях выполнения
-  Labster1.vcxproj -> D:\My projects\Labster1\Debug\Labster1.exe

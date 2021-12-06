@@ -1,5 +1,0 @@
-﻿  UnitTestLabster1.cpp
-D:\My projects\Labster1\List.cpp(171,16): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(190,56): warning C4018: <=: несоответствие типов со знаком и без знака
-D:\My projects\Labster1\List.cpp(207): warning C4715: List::operator[]: значение возвращается не при всех путях выполнения
-  UnitTestLabster1.vcxproj -> D:\My projects\Labster1\Debug\UnitTestLabster1.dll
