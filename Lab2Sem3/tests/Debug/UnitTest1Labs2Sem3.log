@@ -1,0 +1,9 @@
+﻿  UnitTest1Labs2Sem3.cpp
+D:\My projects\Labs2Sem3\List.cpp(169,16): warning C4018: <: несоответствие типов со знаком и без знака
+D:\My projects\Labs2Sem3\List.cpp(183,16): warning C4018: <: несоответствие типов со знаком и без знака
+D:\My projects\Labs2Sem3\List.cpp(201,15): warning C4018: <: несоответствие типов со знаком и без знака
+D:\My projects\Labs2Sem3\List.cpp(222,16): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\My projects\Labs2Sem3\List.cpp(241,56): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\My projects\UnitTest1Labs2Sem3\UnitTest1Labs2Sem3.cpp(37,8): warning C4101: B: неиспользованная локальная переменная
+D:\My projects\Labs2Sem3\List.cpp(258): warning C4715: List::operator[]: значение возвращается не при всех путях выполнения
+  UnitTest1Labs2Sem3.vcxproj -> D:\My projects\Labs2Sem3\Debug\UnitTest1Labs2Sem3.dll
