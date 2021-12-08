@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\My projects\Labster1\main.cpp(42,13): warning C4101: ex: неиспользованная локальная переменная
+  Labster1.vcxproj -> D:\My projects\Labster1\Debug\Labster1.exe
