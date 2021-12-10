@@ -23,7 +23,7 @@ namespace UnitTest1Labs2Sem3
 			try {
 				BogoSort(Array, -2);
 			}
-			catch (int ex) { Assert::IsTrue(ex); }
+			catch (out_of_range &ex) { Assert::IsTrue(&ex); }
 		}
 
 		TEST_METHOD(TestBinarySearch)
@@ -44,7 +44,7 @@ namespace UnitTest1Labs2Sem3
 			try {
 				BinarySearch(Array, -2, 1);
 			}
-			catch (int ex) { Assert::IsTrue(ex); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 
 			try {
 				BinarySearch(Array, 100, 1);
@@ -78,7 +78,7 @@ namespace UnitTest1Labs2Sem3
 			try {
 				QuickSort(Array, -2);
 			}
-			catch (int ex) { Assert::IsTrue(ex); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 
 			int ArrayB[1000];
 			for (unsigned i = 0; i < 1000; i++)
@@ -110,7 +110,7 @@ namespace UnitTest1Labs2Sem3
 			try {
 				InsertionSort(Array, -2);
 			}
-			catch (int ex) { Assert::IsTrue(ex); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 
 			int ArrayB[1000];
 			for (unsigned i = 0; i < 1000; i++)
@@ -142,7 +142,7 @@ namespace UnitTest1Labs2Sem3
 			try {
 				CountingSort(Array, -2);
 			}
-			catch (int ex) { Assert::IsTrue(ex); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 
 			char ArrayB[1000];
 			for (unsigned i = 0; i < 1000; i++)

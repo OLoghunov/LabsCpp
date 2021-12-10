@@ -67,10 +67,9 @@ namespace UnitTestLabster1
 				listS.PushBack(i);
 			listS.Insert(2, 1);
 			Assert::IsTrue((listS.GetSize() == 4) && (listS.At(listS.GetSize() - 3) == 2));
-			try {
-				(listS.Insert(2, 10));
-			}
-			catch (int ex) { Assert::IsTrue(ex); };
+			
+			try { listS.Insert(34, 10); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 		}
 
 		TEST_METHOD(TestMethodAt)
@@ -81,10 +80,9 @@ namespace UnitTestLabster1
 			Assert::IsTrue(listS.At(0) == 1);
 			Assert::IsTrue(listS.At(1) == 2);
 			Assert::IsTrue(listS.At(2) == 3);
-			try {
-				(listS.At(33));
-			}
-			catch (int ex) { Assert::IsTrue(ex); };
+			
+			try { listS.At(34); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 		}
 
 		TEST_METHOD(TestMethodRemove)
@@ -94,11 +92,12 @@ namespace UnitTestLabster1
 				listS.PushBack(i);
 			listS.Remove(0);
 			Assert::IsTrue((listS.GetSize() == 2) && (listS.At(listS.GetSize() - 2) == 2));
-			try {
-				(listS.Remove(34));
-			}
-			catch (int ex) { Assert::IsTrue(ex); };
+
+			try { listS.Remove(34); }
+			catch (out_of_range &ex) { Assert::IsTrue(&ex); }
 		}
+
+		
 
 		TEST_METHOD(TestMethodGetSize)
 		{
@@ -128,10 +127,9 @@ namespace UnitTestLabster1
 
 			listS.Set(3, 2);
 			Assert::IsTrue(listS.At(2) == 3);
-			try {
-				(listS.Set(12, 10));
-			}
-			catch (int ex) { Assert::IsTrue(ex); };
+			
+			try { listS.Set(34, 10); }
+			catch (out_of_range& ex) { Assert::IsTrue(&ex); }
 		}
 
 		TEST_METHOD(TestMethodIsEmpty)

@@ -1,3 +1,7 @@
-﻿  main.cpp
-D:\My projects\Labster1\main.cpp(42,13): warning C4101: ex: неиспользованная локальная переменная
+﻿  List.cpp
+D:\My projects\Labster1\List.cpp(163,16): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\My projects\Labster1\List.cpp(182,56): warning C4018: <=: несоответствие типов со знаком и без знака
+  main.cpp
+  Создание кода...
+D:\My projects\Labster1\List.cpp(198): warning C4715: List::operator[]: значение возвращается не при всех путях выполнения
   Labster1.vcxproj -> D:\My projects\Labster1\Debug\Labster1.exe

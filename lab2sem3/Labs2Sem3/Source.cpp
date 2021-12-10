@@ -13,7 +13,7 @@ bool IsCorrect(int Array[], int size)
 int BinarySearch(int Array[], int size, int x)
 {
 	if (size < 0)
-		throw 1;
+		throw out_of_range("check function BinarySearch");
 	if (!IsCorrect(Array, size))
 		throw 2;
 	unsigned currentCenter = size / 2;
@@ -48,7 +48,7 @@ int BinarySearch(int Array[], int size, int x)
 void Swap(int Array[], int size, int index1, int index2)
 {
 	if (size < 0 || index1 < 0 || index1 >= size || index2 < 0 || index2 >= size)
-		throw 1;
+		throw out_of_range("check function Swap");
 	int temp = 0;
 	temp = Array[index1];
 	Array[index1] = Array[index2];
@@ -58,7 +58,7 @@ void Swap(int Array[], int size, int index1, int index2)
 void Shuffle(int Array[], int size)
 {
 	if (size < 0)
-		throw 1;
+		throw out_of_range("check function Shuffle");
 	for (unsigned i = 0; i < size; i++)
 		Swap(Array, size, i, rand() % size);
 }
@@ -66,7 +66,7 @@ void Shuffle(int Array[], int size)
 bool IsCorrect(char Array[], int size)
 {
 	if (size < 0)
-		throw 1;
+		throw out_of_range("check function IsCorrect");
 	for (unsigned i = 0; i < size - 1; i++)
 		if (Array[i + 1] < Array[i])
 			return false;
@@ -76,7 +76,7 @@ bool IsCorrect(char Array[], int size)
 void BogoSort(int Array[], int size)
 {
 	if (size < 0)
-		throw 1;
+		throw out_of_range("check function BogoSort");
 	if (size)
 		while (!IsCorrect(Array, size))
 			Shuffle(Array, size);
@@ -85,7 +85,7 @@ void BogoSort(int Array[], int size)
 void QuickSort(int Array[], int size)
 {
 	if (size < 0)
-		throw 1;
+		throw out_of_range("check function QuickSort");
 	int i, j, left, right, center = size / 2, valueOfCenter;
 	List tipaStack;
 	tipaStack.PushFront(0);
@@ -131,7 +131,7 @@ void QuickSort(int Array[], int size)
 void InsertionSort(int Array[], int size)
 {
 	if (size < 0)
-		throw 1;
+		throw out_of_range("check function InsertionSort");
 	int i, j, key;
 	for (i = 1; i < size; i++)
 	{
@@ -149,10 +149,10 @@ void InsertionSort(int Array[], int size)
 void CountingSort(char Array[], int size)
 {
 	if (size < 0)
-		throw 1;
-	unsigned c[255];
+		throw out_of_range("check function CountingSort");
+	unsigned c[256];
 	unsigned j = 0;
-	for (unsigned i = 0; i < 255; i++)
+	for (unsigned i = 0; i < 256; i++)
 		c[i] = 0;
 
 	for (unsigned i = 0; i < size; i++)
@@ -161,7 +161,7 @@ void CountingSort(char Array[], int size)
 	for (unsigned i = 0; i < size; i++)
 		Array[i] = 0;
 
-	for (unsigned i = 0; i < 255; i++)
+	for (unsigned i = 0; i < 256; i++)
 		while (c[i] != 0)
 		{
 			Array[j] += i;
@@ -401,9 +401,10 @@ int main()
 		cout << "BogoSorting time: " << double(end - start) << " ms (10 values)" << endl;
 	}
 	catch (int ex) {
-		if (ex == 1)
-			cout << "\nErroneous index/size!\n";
-		if (ex == 2)
-			cout << "\nThe array is not ordered!\n";
+		cout << "\nThe array is not ordered!\n";
+	}
+
+	catch (out_of_range& ex) {
+		cout << "\nErroneous index/size, " << ex.what();
 	}
 }

@@ -68,9 +68,8 @@ void List::PopFront()
 
 void List::Insert(int data, int index)
 {
-	if (!((index <= this->size) && (index >= 0)))
-		throw 1;
-
+	if (index < 0 || index >= this->GetSize())
+		throw out_of_range("check method List::Insert");
 	if (index == 0)
 		PushFront(data);
 	else
@@ -90,8 +89,8 @@ void List::Insert(int data, int index)
 
 int List::At(int index)
 {
-	if (!((index <= this->size) && (index >= 0)))
-		throw 1;
+	if (index < 0 || index >= this->GetSize())
+		throw out_of_range ("check method List::At");
 	unsigned count = 0;
 	Node* current = head;
 	while (count != index)
@@ -104,8 +103,8 @@ int List::At(int index)
 
 void List::Remove(int index)
 {
-	if (!((index <= this->size) && (index >= 0)))
-		throw 1;
+	if (index < 0 || index >= this->GetSize())
+		throw out_of_range("check method List::Remove");
 	if (index == 0)
 		PopFront();
 	else
@@ -132,8 +131,8 @@ void List::Clear()
 
 void List::Set(int data, int index)
 {
-	if (!((index <= this->size) && (index >= 0)))
-		throw 1;
+	if (index < 0 || index >= this->GetSize())
+		throw out_of_range("check method List::Set");
 	unsigned count = 0;
 	Node* current = head;
 	while (count != index)

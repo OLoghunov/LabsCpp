@@ -15,5 +15,7 @@ D:\My projects\Labs2Sem3\Source.cpp(62,25): warning C4018: <: несоответ
 D:\My projects\Labs2Sem3\Source.cpp(70,25): warning C4018: <: несоответствие типов со знаком и без знака
 D:\My projects\Labs2Sem3\Source.cpp(158,25): warning C4018: <: несоответствие типов со знаком и без знака
 D:\My projects\Labs2Sem3\Source.cpp(161,25): warning C4018: <: несоответствие типов со знаком и без знака
+D:\My projects\Labs2Sem3\Source.cpp(403,13): warning C4101: ex: неиспользованная локальная переменная
 D:\My projects\Labs2Sem3\List.cpp(257): warning C4715: List::operator[]: значение возвращается не при всех путях выполнения
+     Создается библиотека D:\My projects\Labs2Sem3\Debug\UnitTest1Labs2Sem3.lib и объект D:\My projects\Labs2Sem3\Debug\UnitTest1Labs2Sem3.exp
   UnitTest1Labs2Sem3.vcxproj -> D:\My projects\Labs2Sem3\Debug\UnitTest1Labs2Sem3.dll

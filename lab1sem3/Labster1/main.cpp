@@ -1,5 +1,6 @@
 #include <iostream>
 #include "List.h"
+#include <stdexcept>
 
 using namespace std;
 
@@ -39,5 +40,5 @@ int main()
 
 		cout << "Index of the first occurrence of list listN in list listS: " << listS.FindFirst(listN) << endl << endl;
 	}
-	catch (int ex)  { cout << "\nErroneous index"; }
+	catch (const out_of_range& ex)  { cout << "\nErroneous index, " << ex.what(); }
 }
