@@ -16,27 +16,15 @@ int main()
 		/*for (unsigned i = 25; i > 1; i--)
 			T.Insert(i);*/
 
-		clock_t start = clock();
 
-		cout << "DFT starts..." << endl;
 		BST::Iterator* I = T.CreateDftIterator();
 		while (I->hasNext())
-			cout << I->next() << ' ';
-		clock_t end = clock();
+			I->next();
 
-		double msec = double(end - start);
-		cout << endl << "Execution time: " << msec << " ms" << endl << endl;
 
-		start = clock();
-
-		cout << "BFT starts..." << endl;
 		BST::Iterator* J = T.CreateBftIterator();
 		while (J->hasNextB())
-			cout << J->nextB() << ' ';
-		end = clock();
-
-		msec = double(end - start);
-		cout << endl << "Execution time: " << msec << " ms" << endl;
+			J->nextB();
 	}
-	catch (int ex) { cout << "\nYou cannot remove a non-existent element!\n"; }
+	catch (exception ex) { cout << endl << ex.what(); }
 }

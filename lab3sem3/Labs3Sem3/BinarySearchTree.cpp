@@ -52,7 +52,7 @@ void BST::Insert(int data)
 void BST::Remove(int data)
 {
 	if (!Contains(data))
-		throw 1;
+		throw exception("You cannot remove a non-existent element!");
 	intNode* current = root;
 	while (data != current->data)
 	{

@@ -43,7 +43,6 @@ public:
 
 	Iterator* CreateDftIterator()
 	{
-		cout << root->data << ' ';
 		return new Iterator(root);
 	}
 	Iterator* CreateBftIterator()
