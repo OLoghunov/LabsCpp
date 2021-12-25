@@ -272,6 +272,23 @@ namespace UnitTestKursSem3
 			Assert::IsTrue(InfToPost(str) == "3 pi + 3 / ");
 			str = "(3*pi-e)/((pi^e-11)*5)";
 			Assert::IsTrue(InfToPost(str) == "3 pi * e - pi e ^ 11 - 5 * / ");
+			str = "-sin(-cos(25))/((2 + 2)^(4 / 2) * (pi - e)^(e - pi))";
+			Assert::IsTrue(InfToPost(str) == "25 cos - sin 2 2 + 4 2 / ^ pi e - e pi - ^ * / - ");
+			try {
+				str = "5-";
+				InfToPost(str);
+			}
+			catch (exception ex) { Assert::IsTrue(ex.what()); }
+			try {
+				str = "()";
+				InfToPost(str);
+			}
+			catch (exception ex) { Assert::IsTrue(ex.what()); }
+			try {
+				str = "(-";
+				InfToPost(str);
+			}
+			catch (exception ex) { Assert::IsTrue(ex.what()); }
 		}
 
 		TEST_METHOD(TestMethodCalculatePostfix)

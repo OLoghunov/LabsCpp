@@ -111,6 +111,15 @@ string InfToPost(string infix)
 			}
 			if (flag)
 			{
+				if (temp ==  "-")
+				{
+					unsigned y;
+					for (y = i + 1; y < infix.length(); y++)
+						if (infix[y] != ' ')
+							break;
+					if (y == infix.length())
+						throw exception("Invalid infix expression");
+				}
 				if (!kStack.GetSize())
 					kStack.Push(temp);
 				else
@@ -236,7 +245,10 @@ int main()
 			throw exception("Invalid infix expression");
 
 		postfix = InfToPost(infix);
-		cout << endl << "Postfix expression: " << endl << postfix;
+
+		if (postfix != "")
+			cout << endl << "Postfix expression: " << endl << postfix;
+		else throw exception("Invalid infix expression");
 
 		double solution = CalculatePostfix(postfix);
 		cout << endl << endl << "Solution = " << solution << endl;
