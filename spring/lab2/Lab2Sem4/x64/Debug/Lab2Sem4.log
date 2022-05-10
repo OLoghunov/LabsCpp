@@ -1,0 +1,3 @@
+﻿  Main.cpp
+D:\My projects\Lab2Sem4\Main.cpp(18,16): warning C4244: инициализация: преобразование "unsigned __int64" в "double", возможна потеря данных
+  Lab2Sem4.vcxproj -> D:\My projects\Lab2Sem4\x64\Debug\Lab2Sem4.exe

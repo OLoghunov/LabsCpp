@@ -1,0 +1,4 @@
+﻿  test.cpp
+test.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl Map::pushFront(double,char)" (?pushFront@Map@@QEAAXND@Z) в функции __catch$?mapFiller@Map@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$0.
+test.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl Map::insert(class Map &)" (?insert@Map@@QEAAXAEAV1@@Z) в функции "public: void __cdecl Map::mapFiller(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?mapFiller@Map@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z).
+D:\My projects\Lab2Sem4\x64\Debug\Testing2Lab4Sem.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
