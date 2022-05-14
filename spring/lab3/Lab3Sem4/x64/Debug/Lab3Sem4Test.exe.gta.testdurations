@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>D:\My projects\Lab3Sem4\x64\Debug\Lab3Sem4Test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="ford_bellman_test.sis" Duration="1" />
+    <TestDuration Test="ford_bellman_exceptions.sis" Duration="1" />
+    <TestDuration Test="ford_bellman.if_it_works" Duration="1" />
+    <TestDuration Test="ford_bellman.exception_on_empty_matrix" Duration="1" />
+    <TestDuration Test="ford_bellamn.exception_on_negative_cicle" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
