@@ -6,24 +6,24 @@ TEST(ford_bellman, should_work_fine)
 	int size = 4;
 	string* names = new string[size]{ "Moscow", "Saint-Petersburg", "Novosibirsk", "Samara"};
 	double** values = new double* [size] {
-		new double[size] {0, 10, 14, 20},
-		new double[size] {20, 0, 40, INF},
-		new double[size] {INF, 35, 0, 8},
-		new double[size] {INF, INF, 13, 0}
+		new double[size] {0, 20, 40, INF},
+		new double[size] {10, 0, 14, 20},
+		new double[size] {35, INF, 0, 8},
+		new double[size] {20, INF, 13, 0}
 	};
 	Matrix matx1 = Matrix(size, names, values);
-	matx1.bellman_ford();
+	
 
 	double** values2 = new double* [size] {
-		new double[size] {0, 10, 14, 20},
-		new double[size] {20, 0, 34, 40},
-		new double[size] {55, 35, 0, 8},
-		new double[size] {68, 48, 13, 0}
+		new double[size] {0, 20, 34, 40},
+		new double[size] {10, 0, 14, 20},
+		new double[size] {28, 48, 0, 8},
+		new double[size] {20, 40, 13, 0}
 	};
 
 	Matrix matx2 = Matrix(size, names, values2);
 
-	EXPECT_TRUE(1);
+	EXPECT_TRUE(matx1.bellman_ford() == matx2);
 }
 
 TEST(ford_bellman, exception_on_empty_matrix)
