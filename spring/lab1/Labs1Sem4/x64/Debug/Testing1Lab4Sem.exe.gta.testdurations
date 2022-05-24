@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>D:\My projects\Labs1Sem4\x64\Debug\Testing1Lab4Sem.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="TestCaseName.TestName" Duration="1" />
+    <TestDuration Test="TestInsertion.sas" Duration="1" />
+    <TestDuration Test="TestInsertion.sis" Duration="1" />
+    <TestDuration Test="TestRemoval.sis" Duration="1" />
+    <TestDuration Test="TestClear.sis" Duration="1" />
+    <TestDuration Test="TestFind.sis" Duration="1" />
+    <TestDuration Test="TestGetKeys.sis" Duration="2" />
+    <TestDuration Test="TestGetKeysGetData.sis" Duration="1" />
+    <TestDuration Test="TestGetKeysGetValues.sis" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
