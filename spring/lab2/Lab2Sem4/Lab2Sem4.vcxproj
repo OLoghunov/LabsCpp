@@ -140,11 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="map.cpp" />
+    <ClCompile Include="list.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bitcode.h" />
-    <ClInclude Include="map.h" />
+    <ClInclude Include="list.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="shannon_fano.h" />
   </ItemGroup>

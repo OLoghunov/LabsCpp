@@ -1,9 +1,9 @@
 #pragma once
-#include "map.h"
+#include "list.h"
 
-Map encode(string str)
+List encode(string str)
 {
-	Map newFilteredMap;
+	List newFilteredMap;
 	newFilteredMap.mapFiller(str);
 	newFilteredMap.algorithm();
 	return newFilteredMap;
@@ -27,7 +27,7 @@ bool notEquals(Bitcode &first, Bitcode &second)
 	}
 }
 
-string decode(Bitcode code, Map map)
+string decode(Bitcode code, List map)
 {
 	string str = "";
 	BitNode* cur = code.getHead();

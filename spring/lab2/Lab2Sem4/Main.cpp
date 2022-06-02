@@ -10,7 +10,7 @@ const string strings[strCount] = {
 
 int main()
 {
-	Map map;
+	List map;
 	for (int i = 0; i < 3; i++) {
 		string str = strings[i];
 		map = encode(str);
