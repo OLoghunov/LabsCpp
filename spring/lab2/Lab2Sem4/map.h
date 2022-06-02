@@ -7,7 +7,7 @@ class Map
 {
 	Node *head;
 	int size;
-	
+	void popFront();
 public:
 
 	Node* getHead() { return this->head; }
@@ -164,16 +164,12 @@ public:
 		Map newMap;
 		for (char& c : str) {
 			try { newMap.increase(c); }
-			catch (exception x) { newMap.pushFront(1, c); }
+			catch (exception x) { newMap.insert(1, c); }
 		}
 		insert(newMap);
 		normalize(double(str.length()));
 	}
 
-	void pushBack(double key, char symb);
-	void pushFront(double key, char symb);
-	void popBack();
-	void popFront();
 	void insert(double key, char symb);
 	void insert(Map &newMap);
 	int getSize() { return size; };

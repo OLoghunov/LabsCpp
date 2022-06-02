@@ -1,49 +1,5 @@
 #include "map.h"
 
-void Map::pushBack(double key, char symb)
-{
-	if (head == nullptr)
-		head = new Node(key, symb, nullptr, nullptr);
-	else
-	{
-		Node* cur = this->head;
-		while (cur->pNext != nullptr)
-			cur = cur->pNext;
-		cur->pNext = new Node(key, symb, nullptr, cur);
-	}
-	size++;
-}
-
-void Map::pushFront(double key, char symb)
-{
-	head = new Node(key, symb, head, nullptr);
-	size++;
-}
-
-void Map::popBack()
-{
-	if (size == 1)
-	{
-		Node* temp = head;
-		head = nullptr;
-		delete temp;
-		size--;
-	}
-	if (size > 1)
-	{
-		Node* cur = this->head;
-		int i = 1;
-		while (i < size - 1) {
-			cur = cur->pNext;
-			i++;
-		}
-		Node* temp = cur->pNext;
-		cur->pNext = nullptr;
-		delete temp;
-		size--;
-	}
-}
-
 void Map::popFront()
 {
 	if (this->size)
@@ -66,8 +22,10 @@ void Map::insert(Map &origMap)
 
 void Map::insert(double key, char symb)
 {
-	if (size == 0)
-		pushFront(key, symb);
+	if (size == 0) {
+		head = new Node(key, symb, head, nullptr);
+		size++;
+	}
 	else
 	{
 		Node* current = head;
